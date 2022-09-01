@@ -1,0 +1,87 @@
+.movies{
+    height: 300px;
+}
+.Movies.moviesSwiper{
+    box-shadow: 0px 0px 15px -8px #DFF6FF;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.swiper {
+    margin-bottom: 150px ;
+    padding: 10px 0px !important;
+   
+}
+.swiper-button-next,.swiper-button-prev{
+    color: #DFF6FF !important;
+}
+body::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+  }
+  body::-webkit-scrollbar-track {
+    background: #DFF6FF;        /* color of the tracking area */
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: #06283D;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border-width: 0px 3px;
+    border-color: #DFF6FF;
+    border-style: solid;
+  }
+  .Loading{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100vh;
+    background: #06283D;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .Loading .tv{
+    width: 120px;
+    height: 90px;
+    background-color: #fff;
+    border-radius: 16px;
+    position: relative;
+    outline: 3px solid #47B5FF;
+    outline-offset: 0px;
+    animation: animateTv .5s infinite alternate-reverse;
+    z-index: 100;
+    border: 5px solid #DFF6FF;
+  
+}
+.Loading .tv::after,.tv::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -103%;
+  height: 80px;
+  width: 3px;
+  background-color: #47B5FF;
+  z-index: -2;
+  border-radius: 20px;
+}
+.Loading .tv::after{
+  transform: rotate(-20deg);
+  background-color: #47B5FF;
+}
+.Loading .tv::before{
+  left: 30px;
+  transform: rotate(23deg);
+
+}
+@keyframes animateTv {
+  0%{
+    background-color: rgb(217, 217, 217);
+    box-shadow: 0px 0px 100px -10px #DFF6FF;
+  }
+  100%{
+    background-color: rgba(0, 0, 0, 0.445);
+
+    box-sizing: none;
+  }
+  
+}
